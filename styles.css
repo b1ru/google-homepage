@@ -1,0 +1,98 @@
+body {
+    font-size: 50px;
+}
+
+#search-bar {
+    grid-area: search;
+    position: relative;
+    justify-self: center;
+    border: 1px solid #dfe1e5;
+    width: 35rem;
+    height: 3rem;
+    border-radius: 30px;
+    margin-top: 20px;
+}
+
+#search-bar input {
+    position: absolute;
+    left: 3rem;
+    top: 0.4rem;
+    border: 0px;
+    width: 75%;
+    height: 80%;
+}
+
+#search-bar input:focus {
+    outline: none;
+}
+
+#search-bar:hover {
+    box-shadow: 0px 0px 5px 2px #dfe1e5;
+}
+
+#search-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px; 
+    left: 0.35em;
+    top: 0.32em;
+}
+
+#mic {
+    position: absolute;
+    width: 20px;
+    height: 20px; 
+    right: 0.35em;
+    top: 0.32em;
+}
+.search {
+    position: fixed;
+    left:0;
+    right: 0;
+    top: 20%;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    grid-column-gap: 10px;
+    
+    grid-template-areas:
+        "logo logo"
+        "search search"
+        "button1 button2";
+}
+
+#logo {
+    grid-area: logo;
+    justify-self: center;
+    
+}
+
+button {
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8 ;
+    color: #5F6368;
+    padding: 0.7em 1.5em;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 30px;
+}
+
+button:hover {
+    color: #222;
+    border: 1px solid #c0c0c0;
+}
+
+
+#button1 {
+    justify-self: end;
+}
+
+#button2 {
+    justify-self: start;
+}
+
+@media (max-width: 700px){
+    #search-bar {
+        width: 80vw;
+    }
+}
